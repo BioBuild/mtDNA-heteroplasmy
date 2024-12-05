@@ -39,22 +39,29 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
 ### Variant calling
 
 - brief explanation
-- code: ``
+- code:
 
 ### Data processing
 
 - brief explanation
-- code: ``
+- code:
+    1. `2023_05_17_gt_remote_processing.R`
+    2. `2024_04_23_merge_raw_rna_allelic_counts_with_mtDNA_server_outs.R`
+    3. `2024_04_23_heteroplasmy_filters.R`
+    4. `2023_07_06_cohort_filters.R`
+    5. `2023_07_15_cohort_annotation.R`
 
 ### Descriptive analysis
 
 - brief explanation
-- code: ``
+- code:
+
 
 ### Model evaluation
 
 - brief explanation
-- code: ``
+- code: 
+    1. 
 
 ### Donor age testing
 
