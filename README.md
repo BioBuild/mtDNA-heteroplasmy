@@ -4,7 +4,7 @@
 
 This repository contains the code required to reproduce the analysis presented in the manuscript "Tissue-specific apparent mtDNA heteroplasmy and its relationship with ageing and mtDNA gene expression" by Wengert et al., which is currently under revision. You can access our preprint [here](link-to-paper). 
 
-Below, you can find a conceptual overview of the project outline and analyses conducted in this study:
+Below, you can find a conceptual overview of the project and analyses conducted for this study:
 
 ![](README_files/project_overview.png)
 
@@ -14,25 +14,34 @@ Below, you can find a conceptual overview of the project outline and analyses co
 
 ## Analysis pipeline
 
-   * [Data processing](###data-processing)
+   * [Data processing](###Data-processing)
       
-   * [Descriptive analysis](###descriptive-analysis)
+   * [Descriptive analysis](###Descriptive-analysis)
 
-   * [Model evaluation](###model-evaluation)
+   * [Model evaluation](###Model-evaluation)
 
-   * [Donor age testing](###donor-age-testing)
+   * [Donor age testing](###Donor-age-testing)
 
    * [mtDNA cis-eQTL](###mtDNA-cis-eQTL)
    
-   * [Mediation analysis](###mediation-analysis)
+   * [Mediation analysis](###Mediation-analysis)
 
-   * [Transcript processing analysis](###transcript-processing-analysis)
+   * [Transcript processing analysis](###Transcript-processing-analysis)
 
 
 ### Data processing
 
 ### Descriptive analysis
 
+### Model evaluation
+
+### Donor age testing
+
+### mtDNA cis-eQTL
+
+### Mediation analysis
+
+### Transcript processing analysis
 
 
 
