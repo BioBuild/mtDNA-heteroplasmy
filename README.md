@@ -19,7 +19,9 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
 
 ## Analysis pipeline
 
-   * [Data processing](#Data-processing)
+   * [Variant calling](#Variant-calling)
+
+   * [Data processing](#Data-processing) 
       
    * [Descriptive analysis](#Descriptive-analysis)
 
@@ -34,20 +36,46 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
    * [Transcript processing analysis](#Transcript-processing-analysis)
 
 
+### Variant calling
+
+- brief explanation
+- code: ``
 
 ### Data processing
 
+- brief explanation
+- code: ``
+
 ### Descriptive analysis
+
+- brief explanation
+- code: ``
 
 ### Model evaluation
 
+- brief explanation
+- code: ``
+
 ### Donor age testing
+
+- brief explanation
+- code: ``
 
 ### mtDNA cis-eQTL
 
+- brief explanation
+- code: ``
+
 ### Mediation analysis
 
+- brief explanation
+- code: ``
+
 ### Transcript processing analysis
+
+- brief explanation
+- code: ``
+
 
 
 ## Dependencies
