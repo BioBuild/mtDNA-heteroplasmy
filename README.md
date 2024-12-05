@@ -4,7 +4,7 @@
 
 This repository contains the code required to reproduce the analysis presented in the manuscript **"Tissue-specific apparent mtDNA heteroplasmy and its relationship with ageing and mtDNA gene expression"** by Wengert et al., which is currently under revision. You can access our preprint [here](link-to-paper). 
 
-Below, you can find a conceptual overview of the project and analyses conducted for this study:
+Below, you can find a conceptual overview of the project and the analyses conducted for this study:
 
 ![](README_files/project_overview.png)
 
@@ -71,7 +71,6 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
     2. `2023_11_22_betabinomial_heteroplasmy_simulations.ipynb`
     3. `2023_12_13_model_assessment_simulations.R`
 
-
 ### Donor age testing
 
 - brief explanation
@@ -98,18 +97,32 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
     6. `2023_08_08_BB_calc_empirical_pvals.R`
     7. `2023_08_10_cis_eQTL_merge_and_annotate_results.R`
     8. `2023_08_10_cis_eQTL_model_diagnostics.R`
-    9. `2023_08_01_plot_mol_test.R`
+    10. `2024_06_17_ciseQTL_cell_type_interaction_analysis.R`
+    11. `2024_06_18_cell_type_fractions_per_tissue.R`
+    xx. `2024_08_14_sanity_check_file_ids.R`
+    12. `2023_08_01_plot_mol_test.R`
 
 ### Mediation analysis
 
 - brief explanation
 - code:
+    1. `2024_04_02_mediation_analysis.`
+    2. `2024_09_23_dono_age_logTPM_interaction.R`
 
 ### Transcript processing analysis
 
 - brief explanation
 - code:
-
+    1. `2024_10_01_select_tissue_sample_pos_bamfiles.R`
+    2. `slurm_submit.py`
+    3. `slurm_build_tissue_command.sh`
+    4. `2024_09_25_count_reads_at_cutsites.py`
+    5. `2024_09_28_sample_level_summary_reads_at_cutsites.R`
+    6. `2024_08_23_qc_descriptive_sample_level_read_summaries.R`
+    7. `2024_11_18_replication_analysis.R`
+    8. `2024_11_18_position_level_analysis.R`
+    9. `2024_11_18_sample_level_analysis.R`
+    10. `2024_10_03_mt_transcript_lengths.R`
 
 
 ## Dependencies
