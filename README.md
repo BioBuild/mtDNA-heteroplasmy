@@ -40,48 +40,75 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
 
 - brief explanation
 - code:
+    XX. scripts for data download.
+    XX. scripts for mtDNA-server variant calling.
 
 ### Data processing
 
-- brief explanation
+- brief explanation (i.e. this is referring to Figure 1 in the manuscript.)
 - code:
     1. `2023_05_17_gt_remote_processing.R`
     2. `2024_04_23_merge_raw_rna_allelic_counts_with_mtDNA_server_outs.R`
     3. `2024_04_23_heteroplasmy_filters.R`
     4. `2023_07_06_cohort_filters.R`
     5. `2023_07_15_cohort_annotation.R`
+    6. `2023_07_07_prep_heteroplasmy_genotype_files.R`
+    7. `2024_06_20_prep_gtex_celltype_deconvolution_files_plus_qc.R`
 
 ### Descriptive analysis
 
 - brief explanation
 - code:
-
+    1. `pipeline_plotting.R`
+    2. `2023_07_15_cohorts_plotting.R`
+    3. `enrichment_testing.R`
 
 ### Model evaluation
 
 - brief explanation
 - code: 
-    1. 
+    1. `2024_04_28_derive_simulation_params.R`
+    2. `2023_11_22_betabinomial_heteroplasmy_simulations.ipynb`
+    3. `2023_12_13_model_assessment_simulations.R`
+
 
 ### Donor age testing
 
 - brief explanation
-- code: ``
+- code:
+    1. `2023_06_15_lm_analytical_all_tissues.R`
+    2. `2024_24_28_LM_A_qc_plots.R`
+    3. `2023_09_15_bb_permutations_per_tissue.R`
+    4. `2023_07_14_BB_fit_analytilcal_pvals.R`
+    5. `2023_07_14_BB_calc_empirical_pvals.R`
+    6. `2023_08_07_BB_annotate_results.R`
+    7. `2023_08_28_donor_age_model_diagnostics.R`
+    8. `2024_06_19_donor_age_cell_type_interaction.R`
+    9. `2023_07_15_plot_pheno_tests`
 
 ### mtDNA cis-eQTL
 
 - brief explanation
-- code: ``
+- code: 
+    1. `2024_06_13_regress_out_peer_factors_from_gene_expression.R`
+    2. `2023_06_19_lm_cis_eQTL_analytical_all_tissues.R`
+    3. `2024_24_28_cis_eQTL_LM_A_qc_plots.R`
+    4. `2023_08_03_BB_permutations_per_tissue.R`
+    5. `2023_08_08_BB_cis_eQTL_analytical_all_tissues.R`
+    6. `2023_08_08_BB_calc_empirical_pvals.R`
+    7. `2023_08_10_cis_eQTL_merge_and_annotate_results.R`
+    8. `2023_08_10_cis_eQTL_model_diagnostics.R`
+    9. `2023_08_01_plot_mol_test.R`
 
 ### Mediation analysis
 
 - brief explanation
-- code: ``
+- code:
 
 ### Transcript processing analysis
 
 - brief explanation
-- code: ``
+- code:
 
 
 
