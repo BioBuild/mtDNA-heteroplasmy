@@ -9,7 +9,7 @@ Below, you can find a conceptual overview of the project and analyses conducted 
 ![](README_files/project_overview.png)
 
 
-- more details/short summary of the approach and key finding.s
+- more details/short summary of the approach and key findings.
 
 
 ## Analysis pipeline
@@ -44,14 +44,31 @@ Below, you can find a conceptual overview of the project and analyses conducted 
 ### Transcript processing analysis
 
 
+## Contact
+
+We are grateful for any feedback or questions about the analysis code! 
+
+- **Coding-Related Questions:**  
+  If you have questions or encounter issues with the code, please submit an issue via `github`.
+
+- **Scientific Correspondence:**  
+    For scientific correspondence please reach out directly to:
+
+  - Simon Wengert: [simon.wengert@helmholtz-munich.de](mailto:simon.wengert@helmholtz-munich.de)  
+  - Dr. Na Cai: [na.cai@helmholtz-munich.de](mailto:na.cai@helmholtz-munich.de)
 
 
-## license
+## Licensing
 
-## contact
+This project is licensed under the MIT License. However, the authors respectfully request that it be used only for non-commercial purposes, unless prior written consent is obtained.
 
-For any coding-related questions please submit an issue via `github`. For scientific correspondence please reach out to me or to Dr. Na Cai:
+### What this means
 
-[simon.wengert@helmholtz-munich.de](mailto:simon.wengert@helmholtz-munich.de)
+- **Non-commercial use** includes academic research, educational projects, personal experimentation, and open collaboration.
+- **Commercial use** includes, but is not limited to:
+  - Use within a for-profit entity (e.g., private companies, corporate labs).
+  - Redistribution of the software for monetary gain.
+  - Embedding the software in a product or service that is sold or licensed.
 
-[na.cai@helmholtz-munich.de](mailto:na.cai@helmholtz-munich.de)
+If you wish to use this software for commercial purposes, please contact the authors to discuss licensing terms.
+
