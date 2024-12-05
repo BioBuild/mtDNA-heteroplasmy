@@ -14,19 +14,19 @@ Below, you can find a conceptual overview of the project and analyses conducted 
 
 ## Analysis pipeline
 
-   * [Data processing](###Data-processing)
+   * [Data processing](#Data-processing)
       
-   * [Descriptive analysis](###Descriptive-analysis)
+   * [Descriptive analysis](#Descriptive-analysis)
 
-   * [Model evaluation](###Model-evaluation)
+   * [Model evaluation](#Model-evaluation)
 
-   * [Donor age testing](###Donor-age-testing)
+   * [Donor age testing](#Donor-age-testing)
 
-   * [mtDNA cis-eQTL](###mtDNA-cis-eQTL)
+   * [mtDNA cis-eQTL](#mtDNA-cis-eQTL)
    
-   * [Mediation analysis](###Mediation-analysis)
+   * [Mediation analysis](#Mediation-analysis)
 
-   * [Transcript processing analysis](###Transcript-processing-analysis)
+   * [Transcript processing analysis](#Transcript-processing-analysis)
 
 
 ### Data processing
