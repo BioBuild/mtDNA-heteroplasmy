@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the code required to reproduce the analysis presented in the manuscript "Tissue-specific apparent mtDNA heteroplasmy and its relationship with ageing and mtDNA gene expression" by Wengert et al., which is currently under revision. You can access our preprint [here](link-to-paper). 
+This repository contains the code required to reproduce the analysis presented in the manuscript **"Tissue-specific apparent mtDNA heteroplasmy and its relationship with ageing and mtDNA gene expression"** by Wengert et al., which is currently under revision. You can access our preprint [here](link-to-paper). 
 
 Below, you can find a conceptual overview of the project and analyses conducted for this study:
 
@@ -10,6 +10,11 @@ Below, you can find a conceptual overview of the project and analyses conducted 
 
 
 - more details/short summary of the approach and key findings.
+
+
+## Code Execution & Usability
+
+The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. File paths and environment settings are specific to the original machines, so you’ll need to modify these to match your own setup. While the code is flexible and designed to be adaptable, it is not intended to run "out of the box" and may need configuration changes (e.g., paths, dependencies). That said, the  pipeline is modular and reproducible with proper setup, and we encourage contributions to improve its general usability.
 
 
 ## Analysis pipeline
@@ -29,6 +34,7 @@ Below, you can find a conceptual overview of the project and analyses conducted 
    * [Transcript processing analysis](#Transcript-processing-analysis)
 
 
+
 ### Data processing
 
 ### Descriptive analysis
@@ -42,6 +48,13 @@ Below, you can find a conceptual overview of the project and analyses conducted 
 ### Mediation analysis
 
 ### Transcript processing analysis
+
+
+## Dependencies
+
+- `python` packages:
+
+- `R` packages:
 
 
 ## Contact
