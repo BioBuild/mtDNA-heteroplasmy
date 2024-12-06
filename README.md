@@ -131,6 +131,8 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
 
 - `R` packages:
 
+- `conda` environments:
+
 
 ## Contact
 
