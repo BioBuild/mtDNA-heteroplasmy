@@ -1,6 +1,6 @@
 # mtDNA-heteroplasmy
 
-## Description
+# Description
 
 This repository contains the code required to reproduce the analysis presented in the manuscript **"Tissue-specific apparent mtDNA heteroplasmy and its relationship with ageing and mtDNA gene expression"** by Wengert et al., which is currently under revision. You can access our preprint [here](link-to-paper). 
 
@@ -9,17 +9,9 @@ Below, you can find a conceptual overview of the project and the analyses conduc
 ![](README_files/project_overview.png)
 
 
-- more details/short summary of the approach and key findings.
-
-
-## Code Execution & Usability
+# Code Execution & Usability
 
 The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. File paths and environment settings are specific to the original machines, so you’ll need to modify these to match your own setup. While the code is flexible and designed to be adaptable, it is not intended to run "out of the box" and may need configuration changes (e.g., paths, dependencies). That said, the  pipeline is modular and reproducible with proper setup, and we encourage contributions to improve its general usability.
-
-
-## Analysis pipeline
-
-   * [Variant calling](#Variant-calling)
 
    * [Data processing](#Data-processing) 
       
@@ -36,16 +28,22 @@ The scripts in this repository work as part of a larger analysis pipeline, but m
    * [Transcript processing analysis](#Transcript-processing-analysis)
 
 
-### Variant calling
+# Obtain mtDNA alignments from bulk RNAseq/WGS data and perform variant calling 
 
-- brief explanation
-- code:
-    XX. scripts for data download.
-    XX. scripts for mtDNA-server variant calling.
+1. We obtain reads mapping to the rCRS mtDNA reference genome [NC_012920 ](https://www.ncbi.nlm.nih.gov/nuccore/251831106) (which is part of the human [hg38 reference genome](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.26/)) using [samtools](https://www.htslib.org/), using flag [-F 3852](https://broadinstitute.github.io/picard/explain-flags.html) to select only the reads that do not fall under the following categories: read unmapped (0x4), mate unmapped (0x8), not primary alignment (0x100), read fails platform/vendor quality checks (0x200), read is PCR or optical duplicate (0x400), supplementary alignment (0x800). 
+   
+```
+samtools view -b -F 3852 $file.bam -o $file.mtdna.bam chrM
+samtools index $file.mtdna.bam
+``` 
+2. We perform variant calling using [mtDNA-server](https://github.com/seppinho/mutserve?tab=readme-ov-file) for each sample individually, then combine the variant calls to form our variant call set, using the [rCRS.fasta](https://raw.githubusercontent.com/seppinho/mutserve/master/files/rCRS.fasta) file as reference. 
+```
+reffile="rCRS.fasta"
+java -jar mutserve-1.3.0.jar analyse-local --input $file.mtdna.bam --reference $reffile --level 0.01 --output $file.mtdna.var.txt 
+```
 
-### Data processing
+# Variant data filtering and processing
 
-- brief explanation (i.e. this is referring to Figure 1 in the manuscript.)
 - code:
     1. `2023_05_17_gt_remote_processing.R`
     2. `2024_04_23_merge_raw_rna_allelic_counts_with_mtDNA_server_outs.R`
