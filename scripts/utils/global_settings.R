@@ -20,7 +20,7 @@ g_ops$date <- paste0(gsub("-","_",Sys.Date()),"_")
 
 
 #+ get filter ops for all filters from csv file --------------------------------
-all_filters_df <- read_csv("~/git/mtDNA_variants/metadata/utils/all_filters.csv")
+all_filters_df <- read_csv("~/metadata/utils/all_filters.csv")
 # make filter options list for direct access in pipeline
 f_ops <- as.list(all_filters_df$value)
 names(f_ops) <- all_filters_df$name
@@ -76,7 +76,7 @@ p_ops$heatmap_theme <-
         legend.key.size = unit(1.5,"cm"))
 
 # init custom colour scheme for tissue_categories
-gt_v8_lookup_df <- read_tsv("~/git/mtDNA_variants/metadata/annotations/gt_v8_lookup_df.tsv")
+gt_v8_lookup_df <- read_tsv("~/metadata/annotations/gt_v8_lookup_df.tsv")
 tissue_categories <- unique(gt_v8_lookup_df$tissue_category)
 colours_tissue_category <- c( "#FB8072", "#E1BE6A", "#D9D9D9",  "#B3DE69","#E66100", "#BEBADA",  "#8DD3C7", "#80B1D3",  "#FCCDE5" )
 names(colours_tissue_category) <- tissue_categories
@@ -107,7 +107,7 @@ names(p_ops$colours_transcript_type_verbose) <-
     "tRNA_coding_pos_37", "tRNA_coding_pos_58")
 
 # adding positions: annotations rectangles (code from Na)
-regions=read.table("~/git/mtDNA_variants/metadata/annotations/mtgenes.txt")
+regions=read.table("~/metadata/annotations/mtgenes.txt")
 colnames(regions)=c("ID", "chr", "start", "end", "gene", "strand","mouse_gene","poly_A")
 regions$colourf=as.character(regions$gene)
 regions$colourf[grep("MT-T",regions$gene)]="MT-tRNA"
