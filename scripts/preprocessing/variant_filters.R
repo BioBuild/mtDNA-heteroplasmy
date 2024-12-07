@@ -1,7 +1,8 @@
 # author:    simon.wengert@helmholtz-muenchen.de
 # date:      2023_07_06
 library(tidytext)
-all_filters_df <- read_csv("~/git/mtDNA_variants/metadata/utils/all_filters.csv")
+source("~/scripts/utils/global_settings.R")
+all_filters_df <- read_csv("~/metadata/utils/all_filters.csv")
 gt_rna_var_df <- readRDS("2024_02_14_gt_rna_var_pre_filtering_het_df.rds")
 
 gt_rna_var_df  <- 
@@ -52,6 +53,7 @@ gt_rna_var_df <- gt_rna_var_df %>% mutate(molecular_event = case_when(Pos %in% m
 ################################################################################
 ###               REMOVE MTDNA SITES PRONE TO SEQ ARTEFACTS                  ###
 ################################################################################
+#+ apply f_ops heteroplasmy filter thr as defined in utils/all_filters csv -----
 # and exlude microsattelites flagged by Peter Campbell's lab
 gt_rna_var_df <- gt_rna_var_df %>% filter(!Pos %in% f_ops$sites_seq_artefacts)
 filter_numbers_df <- bind_rows(filter_numbers_df,
@@ -77,4 +79,21 @@ filter_numbers_df <- bind_rows(filter_numbers_df,
 #     PASS        STRAND_BIAS 
 #     298528      738532 
 
-saveRDS(gt_rna_var_df,"2023_07_06_gt_rna_var_pre_filtering_het_df.rds")
+################################################################################
+###                       FILTER FOR COVERAGE                                ###
+################################################################################
+gt_rna_var_df <- 
+  gt_rna_var_df %>%
+  filter(CoverageFWD > as.integer(f_ops$min_cov_fwd), 
+         CoverageREV > as.integer(f_ops$min_cov_rev))
+filter_numbers_df <- bind_rows(filter_numbers_df,
+                               tibble(step = "min_coverage",
+                                      n_heteroplasmies = nrow(gt_rna_var_df)))
+
+################################################################################
+###       save filter-QCed heteroplasmies                                    ###
+################################################################################
+
+saveRDS(gt_rna_var_df,"2024_04_04_gt_rna_var_qced_pre_wmh_filtering_df.rds")
+
+
