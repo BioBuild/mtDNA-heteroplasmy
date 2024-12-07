@@ -1,6 +1,6 @@
 library(tidyverse)
 library(data.table)
-
+source("~/scripts/utils/global_settings.R")
 ##############################################################################
 ###      load mtDNA_server rna seq variant calls                           ###
 ##############################################################################
