@@ -1,7 +1,7 @@
 # author:    simon.wengert@helmholtz-muenchen.de
 # date:      2024_04_28
 
-library(tidyverse)
+library(tidytext)
 source("~/git/mtDNA_variants/scripts/utils/global_settings.R")
 gt_rna_var_df <- readRDS("2024_04_28_gt_rna_var_n_het_min_positions_df.rds")
 # load filter_number table to keep track of how much is remaining after each step
