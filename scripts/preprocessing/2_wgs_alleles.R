@@ -2,7 +2,7 @@
 # date:      2023_05_16
 library(tidyverse)
 library(data.table)
-
+source("~/scripts/utils/global_settings.R")
 ################################################################################
 ### read in WGS bam file derived mtDNA server calls.                         ###
 ################################################################################
