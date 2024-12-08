@@ -1,0 +1,53 @@
+﻿Tissue,Median mtCN,tissue2
+Adipose - Subcutaneous,1614,adipose_subcutaneous
+Adipose - Visceral (Omentum),1464,adipose_visceral_omentum
+Adrenal Gland,5652,adrenal_gland
+Artery - Aorta,1133,artery_aorta
+Artery - Coronary,1480,artery_coronary
+Artery - Tibial,1660,artery_tibial
+Bladder,1692,NA
+Brain - Amygdala,2984,brain_amygdala
+Brain - Anterior cingulate cortex (BA24),4775,brain_anterior_cingulate_cortex_BA24
+Brain - Caudate (basal ganglia),4567,brain_caudate_basal_ganglia
+Brain - Cerebellar Hemisphere,577,brain_cerebellar_hemisphere
+Brain - Cerebellum,591,brain_cerebellum
+Brain - Cortex,4050,brain_cortex
+Brain - Frontal Cortex (BA9),4727,brain_frontal_cortex_BA9
+Brain - Hippocampus,2934,brain_hippocampus
+Brain - Hypothalamus,3869,brain_hypothalamus
+Brain - Nucleus accumbens (basal ganglia),4423,brain_nucleus_accumbens_basal_ganglia
+Brain - Putamen (basal ganglia),4020,brain_putamen_basal_ganglia
+Brain - Spinal cord (cervical c-1),1868,brain_spinal_cord_cervical_c1
+Brain - Substantia nigra,3094,brain_substantia_nigra
+Breast - Mammary Tissue,1113,breast_mammary_tissue
+Cells - EBV-transformed lymphocytes,1227,cells_ebv_transformed_lymphocytes
+Cervix - Ectocervix,851,NA
+Cervix - Endocervix,684,NA
+Colon - Sigmoid,1267,colon_sigmoid
+Colon - Transverse,829,colon_transverse
+Esophagus - Gastroesophageal Junction,1072,esophagus_gastroesophageal_junction
+Esophagus - Mucosa,725,esophagus_mucosa
+Esophagus - Muscularis,1456,esophagus_muscularis
+Fallopian Tube,649,NA
+Heart - Atrial Appendage,5983,heart_arterial_appendage
+Heart - Left Ventricle,5536,heart_left_ventricle
+Kidney - Cortex,2675,kidney_cortex
+Liver,1730,liver
+Lung,512,lung
+Minor Salivary Gland,1051,minor_salivary_gland
+Muscle - Skeletal,4006,muscle_skeletal
+Nerve - Tibial,725,nerve_tibial
+Ovary,423,ovary
+Pancreas,1415,pancreas
+Pituitary,1276,pituitary
+Prostate,892,prostate
+Skin - Not Sun Exposed (Suprapubic),835,skin_not_sun_exposed_suprapubic
+Skin - Sun Exposed (Lower leg),926,skin_sun_exposed_lower_leg
+Small Intestine - Terminal Ileum,546,small_intestine_terminal_ileum
+Spleen,390,spleen
+Stomach,1270,stomach
+Testis,1026,testis
+Thyroid,1222,thyroid
+Uterus,511,uterus
+Vagina,821,vagina
+Whole Blood,127,whole_blood
