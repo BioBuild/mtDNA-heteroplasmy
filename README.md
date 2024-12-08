@@ -11,7 +11,7 @@ Below, you can find a conceptual overview of the project and the analyses conduc
 
 # Code Execution & Usability
 
-The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. File paths and environment settings are specific to the original machines, so you’ll need to modify these to match your own setup. While the code is flexible and designed to be adaptable, it is not intended to run "out of the box" and may need configuration changes (e.g., paths, dependencies). That said, the  pipeline is modular and reproducible with proper setup, and we encourage contributions to improve its general usability.
+The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. File paths and environment settings are specific to the original machines, so you’ll need to modify these to match your own setup. While the code is flexible and designed to be adaptable, it is not intended to run "out of the box" and may need configuration changes (e.g., paths, dependencies).
 
    * [Data processing](#Data-processing) 
       
@@ -43,6 +43,16 @@ java -jar mutserve-1.3.0.jar analyse-local --input $file.mtdna.bam --reference $
 ```
 
 # Variant data filtering and processing
+
+We perform the following steps for apparent heteroplasmy variant filtering and processing, all scripts for these steps are in the ```scripts/preprocessing``` directory 
+
+Step1: concatenating and preprocessing of raw variant call files from mtDNA-server, as shown in  ```1_variant_files_preprocessing.R```
+Step2: identifying the likely inherited allele using the homoplasmic alleles in each individual at each apparent heteroplasmic position, using variant calls from WGS in Whole Blood, as shown in ```2_wgs_alleles.R```
+Step3: applying quality control filters on apparent heteroplasmy calls, as shown in ```3_variant_filters.R```
+Step4: apply cohort filters to identify common apparent heteroplasmies with adequate variance between individuals for association testing, as shown in ```4_cohort_filters.R```
+Step 5: add in cohort annotations, as shown in ```5_cohort_annotations.R```
+Step 6: prepare apparent heteorplasmy genotype files for association testing, as shown in ```6_prep_het_genotype_file.R```
+Step 7: identify cell types with high median xCell scores per tissue for use in celltype interaction a analyses, as shown in ```7_celltype_proportions.R```
 
 - code:
     1. `2023_05_17_gt_remote_processing.R`
