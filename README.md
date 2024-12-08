@@ -54,11 +54,11 @@ We perform the following explorations for the landscape of mtDNA heteroplasmy an
 
 # Evaluation of association testing models for RNAseq derived apparent heteroplasmy 
 
-- brief explanation
-- code: 
-    1. `2024_04_28_derive_simulation_params.R`
-    2. `2023_11_22_betabinomial_heteroplasmy_simulations.ipynb`
-    3. `2023_12_13_model_assessment_simulations.R`
+We obtain realistic relationships between donor age, RNAseq coverage on mtDNA genes, and apparent heteroplasmy using data from GTEx v8, and use these parameters to simulate a realistic null situation where apparent heteroplasmy is related to RNAseq coverage but not donor age. We then use this simulated data to test if a linear model (LM) or a beta-binomial model (BB) has well-calibrated false discovery rates (FDR). Scripts for this are in the ```scripts/modeltesting``` directory
+
+1. obtain realistic parameters in ```get_realistic_params.R```
+2. simulations in ```simulations.ipynb```
+3. testing LM and BB models on the simulated data in ```test_simulations.R```
 
 # Donor age association testing
 
