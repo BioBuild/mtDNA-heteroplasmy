@@ -47,21 +47,19 @@ java -jar mutserve-1.3.0.jar analyse-local --input $file.mtdna.bam --reference $
 We perform the following steps for apparent heteroplasmy variant filtering and processing, all scripts for these steps are in the ```scripts/preprocessing``` directory 
 
 Step1: concatenating and preprocessing of raw variant call files from mtDNA-server, as shown in  ```1_variant_files_preprocessing.R```
+
 Step2: identifying the likely inherited allele using the homoplasmic alleles in each individual at each apparent heteroplasmic position, using variant calls from WGS in Whole Blood, as shown in ```2_wgs_alleles.R```
+
 Step3: applying quality control filters on apparent heteroplasmy calls, as shown in ```3_variant_filters.R```
+
 Step4: apply cohort filters to identify common apparent heteroplasmies with adequate variance between individuals for association testing, as shown in ```4_cohort_filters.R```
+
 Step 5: add in cohort annotations, as shown in ```5_cohort_annotations.R```
+
 Step 6: prepare apparent heteorplasmy genotype files for association testing, as shown in ```6_prep_het_genotype_file.R```
+
 Step 7: identify cell types with high median xCell scores per tissue for use in celltype interaction a analyses, as shown in ```7_celltype_proportions.R```
 
-- code:
-    1. `2023_05_17_gt_remote_processing.R`
-    2. `2024_04_23_merge_raw_rna_allelic_counts_with_mtDNA_server_outs.R`
-    3. `2024_04_23_heteroplasmy_filters.R`
-    4. `2023_07_06_cohort_filters.R`
-    5. `2023_07_15_cohort_annotation.R`
-    6. `2023_07_07_prep_heteroplasmy_genotype_files.R`
-    7. `2024_06_20_prep_gtex_celltype_deconvolution_files_plus_qc.R`
 
 ### Descriptive analysis
 
