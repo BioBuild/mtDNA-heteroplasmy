@@ -9,11 +9,9 @@ Below, you can find a conceptual overview of the project and the analyses conduc
 ![](README_files/project_overview.png)
 
 
-# Code Execution & Usability
+# Code usability and data access
 
-The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. File paths and environment settings are specific to the original machines, so you’ll need to modify these to match your own setup. While the code is flexible and designed to be adaptable, it is not intended to run "out of the box" and may need configuration changes (e.g., paths, dependencies).
-
-   * [Data processing](#Data-processing) 
+The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. We also do not provide individual level data in any part of our repository, these would have to be obtained through gaining [approved access with GTEx](https://gtexportal.org/home/protectedDataAccess). As such, scripts provided here are not intended to run as is but for demonstration of our analyses.
       
    * [Descriptive analysis](#Descriptive-analysis)
 
