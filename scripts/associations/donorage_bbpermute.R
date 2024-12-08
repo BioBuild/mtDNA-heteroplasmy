@@ -32,7 +32,7 @@ system("conda activate gtex_mt_variants")
 source("~/scripts/utils/global_settings.R")
 library("data.table")
 # this custom function fits the beta-bin regression model
-source('~/scripts/associations/function_beta_binomial_empirical_p_values.R')
+source('~/scripts/associations/functions_bb_empirical.R')
 
 
 #+ R log files -----------------------------------------------------------------
