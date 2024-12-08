@@ -8,11 +8,11 @@ source("~/scripts/utils/global_settings.R")
 ################################################################################
 
 #+ read in mtDNA_server raw outputs and apply filters and QC -------------------
-wgs_raw_filename_v9 <- paste0("/wgs/2023_07_06_gt_raw_wgs_samples_df.rds")
+wgs_raw_filename_v9 <- paste0("2023_07_06_gt_raw_wgs_samples_df.rds")
 if(!file.exists(wgs_raw_filename_v9)){
 
 # wgs samples v9: 
-wgs_v9_var_dir <- "/wgs/mtvar/"
+wgs_v9_var_dir <- "/wgsdir/"
 wgs_v9_filenames <- list.files(path = wgs_v9_var_dir , 
                                 pattern = "*.txt",
                                 full.names = FALSE) 
@@ -131,4 +131,4 @@ gt_rna_var_df$heteroplasmic_level <- ifelse(gt_rna_var_df$MinorBase == "-" &
 # assigning homoplasmic allele
 gt_rna_var_df$homoplasmic_base <- gt_rna_var_df$inherited_allele
 
-saveRDS(gt_rna_var_df,"/2023_07_06_gt_rna_before_flipping_df.rds")
+saveRDS(gt_rna_var_df,"2023_07_06_gt_rna_before_flipping_df.rds")
