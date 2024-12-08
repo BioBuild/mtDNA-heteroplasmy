@@ -35,7 +35,7 @@ samples_v8 <-
 
 ## get metadata 
 gt_v8_public_biospecimen_repository_sample_id <- 
-  read_tsv("~/metadata/annotations/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt") %>%
+  read_tsv("GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt") %>%
     filter(SMAFRZE == "RNASEQ") %>%
     dplyr::select(biospecimen_repository_sample_id = 'SAMPID', everything()) %>%
     pull(biospecimen_repository_sample_id)
