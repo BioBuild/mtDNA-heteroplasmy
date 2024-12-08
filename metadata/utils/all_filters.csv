@@ -1,0 +1,18 @@
+name, filter_type, value, reference
+sites_seq_artefacts, site_filter, 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 513 514 515 516 517 518 519 520 521 522 523 524 525 3105 3106 3107 3108 3109, 0https://elifesciences.org/articles/2935
+variant_type, site_filter, 2, NA
+top_wmh, site_filter, 2.5, NA
+min_cov_fwd, site_filter, 10, NA
+min_cov_rev, site_filter, 10, NA
+mutserve_filter, site_filter, PASS, NA
+delta_frac, site_filter, 0.5, NA
+fraction_sum_of_levels_per_pos, site_filter, 0.25, NA
+het_n_donors_min, site_filter, 5, NA
+mad_scaled_median, site_filter, 0.001, NA
+tissue_n_donors_min, cohort_filter, 60, NA
+donor_fraction_missing_sites, cohort_filter, 0.25, NA
+sample_fraction_missing_sites, cohort_filter, 0.25, NA
+site_n_donors_min, test_filter, 60, NA
+site_variance_larger_than, test_filter, 0, NA
+site_signal_type_exploration, test_filter, heteroplasmy non_heteroplasmy, NA
+site_signal_type_stringent, test_filter, heteroplasmy, NA
