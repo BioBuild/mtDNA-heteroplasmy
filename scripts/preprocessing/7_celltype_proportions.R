@@ -8,9 +8,9 @@ library("kableExtra")
 # https://gtexportal.org/home/downloads/adult-gtex/qtl on 2024-06-27
 file_name <- "2024_07_26_GTEx_Analysis_v8_xCell_scores_7_celltypes_long_form_annotated_by_simon.txt"
 if(!file.exists(file_name)){
-  gt_xCell_scores_df <- read_tsv("~/metadata/annotations/GTEx_Analysis_v8_xCell_scores_7_celltypes.txt", show_col_types = FALSE)
+  gt_xCell_scores_df <- read_tsv("GTEx_Analysis_v8_xCell_scores_7_celltypes.txt", show_col_types = FALSE)
   # lookuptable for annotating tissues, SUBJIDs etc.v
-  gt_v8_lookup_df <- read_tsv("~/metadata/annotations/gt_v8_lookup_df.tsv", show_col_types = FALSE)
+  gt_v8_lookup_df <- read_tsv("gt_v8_lookup_df.tsv", show_col_types = FALSE)
   # wrangle and annotate
   gt_xCell_scores_df <- gt_xCell_scores_df %>%
     pivot_longer(-c("cell_type"),names_to = "biospecimen_repository_sample_id",values_to = "xCell_enrichment_score")
@@ -35,9 +35,9 @@ if(!file.exists(file_name)){
     mutate(present_in_rna_var = case_when(biospecimen_repository_sample_id %in% unique(gt_rna_var_df$biospecimen_repository_sample_id) ~ TRUE,
                                           TRUE ~ FALSE))
     # save file to disc for Xenofon for applying transformations
-  write_tsv(gt_xCell_scores_df,paste0("~/metadata/annotations/",file_name))
+  write_tsv(gt_xCell_scores_df,file_name)
 } else {
-  gt_xCell_scores_df <- read_tsv(paste0("~/metadata/annotations/",file_name))
+  gt_xCell_scores_df <- read_tsv(file_name)
 }
 
 #+ xCell score threshold used by Kim-Hellmuth et al. 2020 ----------------------
@@ -73,7 +73,7 @@ gt_xCell_scores_df <-
     ungroup()
 
 #+ save all tissues cell type proportion file to disc --------------------------
-write_tsv(gt_xCell_scores_df, "~/metadata/annotations/2024_08_14_celltype_proportions_all_tissues.tsv")
+write_tsv(gt_xCell_scores_df, "2024_08_14_celltype_proportions_all_tissues.tsv")
 
 
 #+ load heteroplasmy files and compare the number of donor ids ---------
