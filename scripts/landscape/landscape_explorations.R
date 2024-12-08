@@ -85,7 +85,7 @@ print(p)
 dev.off()
 
 ## now only work with mtDNA heteroplasmies -------------------------------------------------------------
-## get somatic vs inherited 
+## get somatic vs inherited ----------------------------------------------------------------------------
 data1=data[which(data$molecular_process=="dna_mutation"),]
 ## get number of tissue types  each pos is found in 
 d3=ddply(data1,.(SUBJID,het_id,annot),summarise,count=sum(i))
@@ -110,7 +110,7 @@ p=p+theme(panel.border = element_blank(), panel.grid.major = element_blank(),pan
 print(p)
 dev.off()
 
-## get number of somatic/inherited variations per gene 
+## get number of somatic/inherited variations per gene -------------------------------------------------
 data1$key3=paste(data1$SUBJID,data1$het_id,sep=".")
 data1$mtdna_het_type=d3a$type[match(data1$key3,d3a$key)]
 data1$gene_name[which(is.na(data1$gene_name))]="D-loop"
@@ -181,7 +181,7 @@ p=p+theme(panel.border = element_blank(), panel.grid.major = element_blank(),pan
 print(p)
 dev.off()
 
-## get correlation between somatic mutations with mt-CN -------------------------------------------
+## get correlation between somatic mutations with mt-CN -----------------------------------------------
 mtcn=read.csv("~/metadata/annotation/rath_pnas_mtcn.csv",as.is=T)
 d3e=ddply(d3b,.(tissue,mtdna_het_type),summarise,count=sum(nhet),nhet=length(unique(het_id)))
 d3e$tissue2=data1$tissue2[match(d3e$tissue,data1$tissue)]
@@ -217,7 +217,7 @@ p=p+theme(panel.border = element_blank(), panel.grid.major = element_blank(),pan
 print(p)
 dev.off()
 
-## examine tissue distribution of one pathogenic het site 
+## examine tissue distribution of one pathogenic het site -----------------------------------------------
 forplot=data[which(data$Pos==3243),]
 forplot$annot=factor(forplot$annot)
 annotcols=annot$colours[match(levels(forplot$annot),annot$annotation)]
