@@ -11,7 +11,7 @@ Below, you can find a conceptual overview of the project and the analyses conduc
 
 # Code usability and data access
 
-The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. We also do not provide individual level data in any part of our repository, these would have to be obtained through gaining [approved access with GTEx](https://gtexportal.org/home/protectedDataAccess). As such, scripts provided here are not intended to run as is but for demonstration of our analyses.
+The scripts in this repository work as part of a larger analysis pipeline, but may require minor adjustments to run on different systems. We also do not provide individual level data (either raw data or processed data as part of our project) in any part of our repository, these would have to be obtained through gaining [approved access with GTEx](https://gtexportal.org/home/protectedDataAccess). As such, scripts provided here are not intended to run as is but for demonstration of our analyses.
       
    * [Descriptive analysis](#Descriptive-analysis)
 
