@@ -61,9 +61,9 @@ We perform the following explorations for the landscape of mtDNA heteroplasmy an
 3. identification of putative inherited/somatic nature mtDNA heteroplasmy through looking into the number of tissues they occur in as described in [An et al Nat Genet 2024](https://www.nature.com/articles/s41588-024-01838-z) 
 4. obtaining associations between putative inherited/somatic nature mtDNA heteroplasmy and median mtDNA copy number (mtDNA-CN) as previously established in [Rath et al PNAS 2024](https://www.pnas.org/doi/10.1073/pnas.2402291121)
 5. checking for tissue occurrence of pathogenic mtDNA heteroplasmy at mt.3243A>G as reviewed in [Gomes et al Hum Mol Genet 2021](https://doi.org/10.1093/hmg/ddab156), previously associated with various clinical phenotypes ranging from severe MELAS to mild deafness and glucose intolerance
-7. enrichment testing of occurrence of mtRNA modifications in CNS tissues
+6. enrichment testing of occurrence of mtRNA modifications in CNS tissues
 
-1-6 are detailed in ```landscape_explorations.R``` and 7 is detailed in ```cns_enrichment.R```
+1-5 are detailed in ```landscape_explorations.R``` and 6 is detailed in ```cns_enrichment.R```
 
 # Evaluation of association testing models for RNAseq derived apparent heteroplasmy 
 
