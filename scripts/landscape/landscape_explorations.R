@@ -3,6 +3,7 @@ library(plyr)
 library(reshape2)
 library(RColorBrewer)
 
+annot=read.delim("~/metadata/annotations/gtex_tissue_colours.txt",as.is=T) 
 data=readRDS("2024_04_28_gt_rna_var_annotated.rds")
 data=as.data.frame(data)
 data$tissue2=data$tissue
