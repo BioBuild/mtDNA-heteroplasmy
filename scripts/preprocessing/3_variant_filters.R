@@ -28,7 +28,7 @@ gt_high_heteroplasmies <-
 ################################################################################
 
 gt_eurpean_donors <- 
-    read_tsv("~/metadata/annotations/2023_05_17_gt_gPC_identified_Eur_donors.tsv") %>%
+    read_tsv("2023_05_17_gt_gPC_identified_Eur_donors.tsv") %>%
     pull(SUBJID)
 gt_rna_var_df <- gt_rna_var_df %>% filter(SUBJID %in% gt_eurpean_donors)
 
