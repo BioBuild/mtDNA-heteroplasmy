@@ -46,22 +46,15 @@ java -jar mutserve-1.3.0.jar analyse-local --input $file.mtdna.bam --reference $
 
 We perform the following steps for apparent heteroplasmy variant filtering and processing, all scripts for these steps are in the ```scripts/preprocessing``` directory 
 
-Step1: concatenating and preprocessing of raw variant call files from mtDNA-server, as shown in  ```1_variant_files_preprocessing.R```
+1. concatenating and preprocessing of raw variant call files from mtDNA-server, as shown in  ```1_variant_files_preprocessing.R```
+2. identifying the likely inherited allele using the homoplasmic alleles in each individual at each apparent heteroplasmic position, using variant calls from WGS in Whole Blood, as shown in ```2_wgs_alleles.R```
+3. applying quality control filters on apparent heteroplasmy calls, as shown in ```3_variant_filters.R```
+4. apply cohort filters to identify common apparent heteroplasmies with adequate variance between individuals for association testing, as shown in ```4_cohort_filters.R```
+5. add in cohort annotations, as shown in ```5_cohort_annotations.R```
+6. prepare apparent heteorplasmy genotype files for association testing, as shown in ```6_prep_het_genotype_file.R```
+7. identify cell types with high median xCell scores per tissue for use in celltype interaction a analyses, as shown in ```7_celltype_proportions.R```
 
-Step2: identifying the likely inherited allele using the homoplasmic alleles in each individual at each apparent heteroplasmic position, using variant calls from WGS in Whole Blood, as shown in ```2_wgs_alleles.R```
-
-Step3: applying quality control filters on apparent heteroplasmy calls, as shown in ```3_variant_filters.R```
-
-Step4: apply cohort filters to identify common apparent heteroplasmies with adequate variance between individuals for association testing, as shown in ```4_cohort_filters.R```
-
-Step 5: add in cohort annotations, as shown in ```5_cohort_annotations.R```
-
-Step 6: prepare apparent heteorplasmy genotype files for association testing, as shown in ```6_prep_het_genotype_file.R```
-
-Step 7: identify cell types with high median xCell scores per tissue for use in celltype interaction a analyses, as shown in ```7_celltype_proportions.R```
-
-
-### Descriptive analysis
+# Landscape of apparent mtDNA heteroplasmy and enrichment testing in CNS tissues 
 
 - brief explanation
 - code:
@@ -69,7 +62,7 @@ Step 7: identify cell types with high median xCell scores per tissue for use in 
     2. `2023_07_15_cohorts_plotting.R`
     3. `enrichment_testing.R`
 
-### Model evaluation
+# Evaluation of association testing models for RNAseq derived apparent heteroplasmy 
 
 - brief explanation
 - code: 
@@ -77,7 +70,7 @@ Step 7: identify cell types with high median xCell scores per tissue for use in 
     2. `2023_11_22_betabinomial_heteroplasmy_simulations.ipynb`
     3. `2023_12_13_model_assessment_simulations.R`
 
-### Donor age testing
+# Donor age association testing
 
 - brief explanation
 - code:
@@ -91,7 +84,7 @@ Step 7: identify cell types with high median xCell scores per tissue for use in 
     8. `2024_06_19_donor_age_cell_type_interaction.R`
     9. `2023_07_15_plot_pheno_tests`
 
-### mtDNA cis-eQTL
+# Apparent heteroplasmy eQTL  
 
 - brief explanation
 - code: 
@@ -108,14 +101,14 @@ Step 7: identify cell types with high median xCell scores per tissue for use in 
     xx. `2024_08_14_sanity_check_file_ids.R`
     12. `2023_08_01_plot_mol_test.R`
 
-### Mediation analysis
+# Mediation analysis between apparent heteroplasmy, mtDNA gene expression and donor age 
 
 - brief explanation
 - code:
     1. `2024_04_02_mediation_analysis.`
     2. `2024_09_23_dono_age_logTPM_interaction.R`
 
-### Transcript processing analysis
+# mt-tRNA modification roles in transcript processing 
 
 - brief explanation
 - code:
@@ -130,17 +123,7 @@ Step 7: identify cell types with high median xCell scores per tissue for use in 
     9. `2024_11_18_sample_level_analysis.R`
     10. `2024_10_03_mt_transcript_lengths.R`
 
-
-## Dependencies
-
-- `python` packages:
-
-- `R` packages:
-
-- `conda` environments:
-
-
-## Contact
+# Contact
 
 We are grateful for any feedback or questions about the analysis code! 
 
