@@ -2,13 +2,13 @@
 #+ source dependencies ---------------------------------------------------------
 source("~/git/mtDNA_variants/scripts/utils/global_settings.R")
 library(data.table)
-gt_gPCs <- read_tsv("~/metadata/annotations/gt_v8_gPCs_europ.tsv")
+gt_gPCs <- read_tsv("gt_v8_gPCs_europ.tsv")
 
 #+ load data -------------------------------------------------------------------
 gt_rna_var_df <- readRDS("2024_04_28_gt_rna_var_passing_het_filters_df.rds")
 
 #+ filter for samples and tissues passing cohort filters -----------------------
-gt_rna_var_all_filters_df <- readRDS(paste0(g_ops$metadata_dir,"2024_04_28_gt_rna_var_annotated.rds"))
+gt_rna_var_all_filters_df <- readRDS("2024_04_28_gt_rna_var_annotated.rds"))
 passing_all_filters_mask_df <- gt_rna_var_all_filters_df %>%
   dplyr::select(biospecimen_repository_sample_id,SUBJID,tissue,Pos)
 gt_rna_var_df <- gt_rna_var_df %>% 
