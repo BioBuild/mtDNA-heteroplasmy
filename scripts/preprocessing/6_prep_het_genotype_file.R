@@ -1,6 +1,6 @@
 # author:     simon.wengert@helmholtz-munich.de
 #+ source dependencies ---------------------------------------------------------
-source("~/git/mtDNA_variants/scripts/utils/global_settings.R")
+source("~/scripts/utils/global_settings.R")
 library(data.table)
 gt_gPCs <- read_tsv("gt_v8_gPCs_europ.tsv")
 
