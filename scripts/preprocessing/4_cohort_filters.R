@@ -2,7 +2,7 @@
 # date:      2024_04_28
 
 library(tidytext)
-source("~/git/mtDNA_variants/scripts/utils/global_settings.R")
+source("~/scripts/utils/global_settings.R")
 gt_rna_var_df <- readRDS("2024_04_28_gt_rna_var_n_het_min_positions_df.rds")
 # load filter_number table to keep track of how much is remaining after each step
 filter_numbers_df <- read_tsv("heteroplasmy_filter_numbers.tsv")
@@ -26,5 +26,3 @@ filter_numbers_df
 
 #+ save file to disc -----------------------------------------------------------
 saveRDS(gt_rna_var_df,"2024_04_28_gt_rna_var_cohort_filters.rds")
-# write out filter_numbers for commonality signal filter step
-write_tsv(filter_numbers_df,"heteroplasmy_filter_numbers.tsv")
