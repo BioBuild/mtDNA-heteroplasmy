@@ -2,7 +2,7 @@
 # notes:    add genomic and other annotations to cohort files 
 
 #+ source dependencies ---------------------------------------------------------
-source("~/git/mtDNA_variants/scripts/utils/global_settings.R")
+source("~/scripts/utils/global_settings.R")
 
 #+ load genuine heteroplasmy table ---------------------------------------------
 gt_rna_var_df <- readRDS("2024_04_28_gt_rna_var_cohort_filters.rds")
@@ -27,7 +27,7 @@ gt_rna_var_df <-
 mt_tRNA_modifications_df <- read_tsv("~/metadata/annotations/mt_tRNA_modified_sites_only.tsv")
 m1A_G_methylations <- mt_tRNA_modifications_df %>% filter(rna_modification %in% c("m1A","m1G"))
 # genomic annotation
-chrM_anno <- read_tsv("~/git/mtDNA_variants/metadata/annotations/gencode_v35_annotation_chrM.gtf") %>% as_granges()
+chrM_anno <- read_tsv("~/metadata/annotations/gencode_v35_annotation_chrM.gtf") %>% as_granges()
 
 
 #+ annotate m1A/G rna methylations ---------------------------------------------
