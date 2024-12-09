@@ -37,7 +37,7 @@ We perform the following steps for apparent heteroplasmy variant filtering and p
 4. apply cohort filters to identify common apparent heteroplasmies with adequate variance between individuals for association testing, as shown in ```4_cohort_filters.R```
 5. add in cohort annotations, as shown in ```5_cohort_annotations.R```
 6. prepare apparent heteorplasmy genotype files for association testing, as shown in ```6_prep_het_genotype_file.R```
-7. identify cell types with high median xCell scores per tissue for use in celltype interaction a analyses, as shown in ```7_celltype_proportions.R```
+7. identify cell types with high median [xCell scores](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1349-1) in [7 cell types in 35 GTEx tissues](https://www.science.org/doi/10.1126/science.aaz8528) for use in celltype interaction analyses, as shown in ```7_celltype_proportions.R```
 
 # Landscape of apparent mtDNA heteroplasmy and enrichment testing in CNS tissues 
 
@@ -62,17 +62,14 @@ We obtain realistic relationships between donor age, RNAseq coverage on mtDNA ge
 
 # Donor age association testing
 
-- brief explanation
-- code:
-    1. `2023_06_15_lm_analytical_all_tissues.R`
-    2. `2024_24_28_LM_A_qc_plots.R`
-    3. `2023_09_15_bb_permutations_per_tissue.R`
-    4. `2023_07_14_BB_fit_analytilcal_pvals.R`
-    5. `2023_07_14_BB_calc_empirical_pvals.R`
-    6. `2023_08_07_BB_annotate_results.R`
-    7. `2023_08_28_donor_age_model_diagnostics.R`
-    8. `2024_06_19_donor_age_cell_type_interaction.R`
-    9. `2023_07_15_plot_pheno_tests`
+From the evaluation of association testing models we determined that the BB model is better calibrated than the LM especially when RNAseq coverage is low and heteroskedasticity of heteorplasmy is high. However BB takes a much longer time than LM, and even more so with permutations that can allow us to derive empirical p values. As such in our paper we detail our recommendation for a two-step approach where we perform LM first then BB only on the significant associations. We use this two-step approach in the paper to examine the effect of donor age on apparent heteroplasmy VAF. Scripts for this are in the ```scripts/associations``` directory 
+
+1. LM test for donor age associations with VAF in ```donorage_lmtest.R```
+2. BB test functions for donor age associations with VAF in ```functions_bb_empirical.R```
+3. BB test for donor age associtions with VAF in ```donorage_bbtest.R```
+4. BB permutations and derivation of empirical p values are in ```donorage_bbpermute.R``` and ```donorage_bbempirical.R```
+
+We also investigate the interaction effect of donor age and cell type [xCell scores](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1349-1) in [7 cell types in 35 GTEx tissues](https://www.science.org/doi/10.1126/science.aaz8528). This is shown in ```donorage_celltype_interactions.R```
 
 # Apparent heteroplasmy eQTL  
 
