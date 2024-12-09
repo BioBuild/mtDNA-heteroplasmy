@@ -73,20 +73,13 @@ We also investigate the interaction effect of donor age and cell type [xCell sco
 
 # Apparent heteroplasmy eQTL  
 
-- brief explanation
-- code: 
-    1. `2024_06_13_regress_out_peer_factors_from_gene_expression.R`
-    2. `2023_06_19_lm_cis_eQTL_analytical_all_tissues.R`
-    3. `2024_24_28_cis_eQTL_LM_A_qc_plots.R`
-    4. `2023_08_03_BB_permutations_per_tissue.R`
-    5. `2023_08_08_BB_cis_eQTL_analytical_all_tissues.R`
-    6. `2023_08_08_BB_calc_empirical_pvals.R`
-    7. `2023_08_10_cis_eQTL_merge_and_annotate_results.R`
-    8. `2023_08_10_cis_eQTL_model_diagnostics.R`
-    10. `2024_06_17_ciseQTL_cell_type_interaction_analysis.R`
-    11. `2024_06_18_cell_type_fractions_per_tissue.R`
-    xx. `2024_08_14_sanity_check_file_ids.R`
-    12. `2023_08_01_plot_mol_test.R`
+We further use the same two-step approach in the paper to examine the effect of apparent heteroplasmy VAF on mtDNA gene expression, in polyA mtDNA genes (all protein coding genes except for _MT-ND6_). For all mtDNA polyA gene expressions we use residuals of their log(TPM+1) gene expression levels after correcting for tissue-specific PEER factors, as shown in ```get_geneexp_residuals.R```. Scripts for this are in the ```scripts/eqtl``` directory 
+
+1. LM test for VAF eqtls in ```eqtl_lmtest.R```
+3. BB test for VAF eqtls in ```eqtl_bbtest.R```
+4. BB permutations and derivation of empirical p values are in ```eqtl_bbpermute.R``` and ```eqtl_bbempirical.R```
+
+We also investigate the interaction effect of cell type [xCell scores](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1349-1) on VAF eqtls in [7 cell types in 35 GTEx tissues](https://www.science.org/doi/10.1126/science.aaz8528). This is shown in ```eqtl_celltype_interactions.R```
 
 # Mediation analysis between apparent heteroplasmy, mtDNA gene expression and donor age 
 
