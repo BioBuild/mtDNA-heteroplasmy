@@ -83,31 +83,24 @@ We also investigate the interaction effect of cell type [xCell scores](https://g
 
 # Mediation analysis between apparent heteroplasmy, mtDNA gene expression and donor age 
 
-We then did two analyses to test the relationships between apparent heteroplasmy, mtDNA gene expression and donor age for 10 instances where the apparent heteroplasmy eqtl also has a donor age association. Scripts for both analyses are in ```scripts/mediation```
+We then perform two analyses to test the relationships between apparent heteroplasmy, mtDNA gene expression and donor age for 10 instances where the apparent heteroplasmy eqtl also has a donor age association. Scripts for both analyses are in ```scripts/mediation```
 
 1. Mediation analysis using partial correlations in ```mediation_analysis.R```
 2. interaction effects between donor age and mtDNA gene expression on apparent heteroplasmy VAF in ```donorage_eqtl_interaction.R```
    
 # mt-tRNA modification roles in transcript processing 
 
-- brief explanation
-- code:
-    1. `2024_10_01_select_tissue_sample_pos_bamfiles.R`
-    2. `slurm_submit.py`
-    3. `slurm_build_tissue_command.sh`
-    4. `2024_09_25_count_reads_at_cutsites.py`
-    5. `2024_09_28_sample_level_summary_reads_at_cutsites.R`
-    6. `2024_08_23_qc_descriptive_sample_level_read_summaries.R`
-    7. `2024_11_18_replication_analysis.R`
-    8. `2024_11_18_position_level_analysis.R`
-    9. `2024_11_18_sample_level_analysis.R`
-    10. `2024_10_03_mt_transcript_lengths.R`
+Finally we perform a few analyses to test whether p9 mt-tRNA modifications affect the gene expression levels of the mtDNA genes on their 5' ends, as previously proposed in many studies including [Meynier et al Nat Comms 2024](https://www.nature.com/articles/s41467-024-49132-0), and tested implicitly in [Ali et al Comms Bio 2020](https://www.nature.com/articles/s42003-020-0879-3). Scripts for these analyses are in ```scripts/transcript```
+
+1. Replication of results shown in [Ali et al Comms Bio 2020](https://www.nature.com/articles/s42003-020-0879-3) in Whole Blood, then performed in all other tissues in GTEx v8, in ```p9_5prime_replication.R```
+2. Same analysis done only using modified mt-tRNA reads per sample, asking if a 5' cut on the same reads are associated with 5' gene expression, in ```p9_5prime_cut.R```
+3. Read level data per sample across all tissues at p9 mt-tRNA modifications are obtained using [pysam](https://pysam.readthedocs.io/en/latest/api.html) as shown in ```p9_count_cutreads.py``` and annotated summarised in ```p9_read_level_data.R``` 
 
 # Contact
 
 We are grateful for any feedback or questions about the analysis code! 
 
-- **Coding-Related Questions:**  
+- **Code-Related Questions:**  
   If you have questions or encounter issues with the code, please submit an issue via `github`.
 
 - **Scientific Correspondence:**  
