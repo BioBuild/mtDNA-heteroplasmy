@@ -83,11 +83,11 @@ We also investigate the interaction effect of cell type [xCell scores](https://g
 
 # Mediation analysis between apparent heteroplasmy, mtDNA gene expression and donor age 
 
-- brief explanation
-- code:
-    1. `2024_04_02_mediation_analysis.`
-    2. `2024_09_23_dono_age_logTPM_interaction.R`
+We then did two analyses to test the relationships between apparent heteroplasmy, mtDNA gene expression and donor age for 10 instances where the apparent heteroplasmy eqtl also has a donor age association. Scripts for both analyses are in ```scripts/mediation```
 
+1. Mediation analysis using partial correlations in ```mediation_analysis.R```
+2. interaction effects between donor age and apparent heteroplasmy VAF on mtDNA gene expression in ```donorage_eqtl_interaction.R```
+   
 # mt-tRNA modification roles in transcript processing 
 
 - brief explanation
