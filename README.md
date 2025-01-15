@@ -2,7 +2,7 @@
 
 # Description
 
-This repository contains the code required to reproduce the analysis presented in the manuscript **"Tissue-specific apparent mtDNA heteroplasmy and its relationship with ageing and mtDNA gene expression"** by Wengert et al., which is currently under revision. You can access our preprint [here](link-to-paper). 
+This repository contains the code required to reproduce the analysis presented in the manuscript **"Tissue-specific apparent mtDNA heteroplasmy and its relationship with ageing and mtDNA gene expression"** by Wengert et al., which is currently under revision. You can access our preprint [here](https://www.biorxiv.org/content/10.1101/2024.12.11.627989v1.abstract). 
 
 Below, you can find a conceptual overview of the project and the analyses conducted for this study:
 
